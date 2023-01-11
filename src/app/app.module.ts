@@ -13,7 +13,6 @@ import { CoreModule } from "./core/core.module";
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
 
     // third-party
@@ -21,6 +20,7 @@ import { CoreModule } from "./core/core.module";
 
     // app
     CoreModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,10 @@
 <h1>{{ ativo }}</h1>
 
+<mat-slide-toggle (change)="onChange($event)"
+                  [(ngModel)]="updateAutomatically"
+                  color="primary">Atualizar automaticamente (30 segundos)
+</mat-slide-toggle>
+
 <mat-tab-group>
   <mat-tab label="Tabela">
     <app-table-variance [dataSource]="variances"></app-table-variance>

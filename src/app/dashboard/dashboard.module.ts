@@ -6,6 +6,7 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { LineChartComponent } from './components/line-chart/line-chart.component';
 import { TableVarianceComponent } from './components/table-variance/table-variance.component';
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [DashboardComponent, LineChartComponent, TableVarianceComponent],
@@ -14,6 +15,7 @@ import { TableVarianceComponent } from './components/table-variance/table-varian
     DashboardRoutingModule,
     FlexLayoutModule,
     MaterialModule,
+    FormsModule,
   ],
 })
 export class DashboardModule {

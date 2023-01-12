@@ -2,7 +2,7 @@
 
 <mat-tab-group>
   <mat-tab label="Tabela">
-    <app-table-variance></app-table-variance>
+    <app-table-variance [dataSource]="variances"></app-table-variance>
   </mat-tab>
   <mat-tab label="Gráfico">
     <app-line-chart [data]="variances"></app-line-chart>

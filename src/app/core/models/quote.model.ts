@@ -1,4 +1,4 @@
-export interface Quote {
+export interface IQuote {
   close: number[];
   open: number[];
   volume: number[];

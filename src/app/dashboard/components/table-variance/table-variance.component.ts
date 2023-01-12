@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Variance } from "../../../core/models/variance.model";
+import { IVariance } from "../../../core/models/variance.model";
 
 @Component({
   selector: 'app-table-variance',
@@ -8,7 +8,7 @@ import { Variance } from "../../../core/models/variance.model";
 })
 export class TableVarianceComponent {
 
-  @Input() dataSource: Variance[] = [];
+  @Input() dataSource: IVariance[] = [];
 
   displayedColumns: string[] = [
     'day', 'date', 'price', 'variationDMinusOne', 'firstDateVariation'

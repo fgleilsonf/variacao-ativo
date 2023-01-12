@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MenuItem } from './core/models/menu-item.model';
+import { IMenuItem } from './core/models/menu-item.model';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,7 @@ import { MenuItem } from './core/models/menu-item.model';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  menuItems: MenuItem[] = [
+  menuItems: IMenuItem[] = [
     {
       fasIcon: 'chart-line',
       routerLink: '/dashboard',

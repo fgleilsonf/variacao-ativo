@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 import { map, Observable, tap } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import { MessageService } from "./message.service";
-import { Finance } from "../models/finance.model";
-import { Variance } from "../models/variance.model";
+import { IFinance } from "../models/finance.model";
+import { IVariance } from "../models/variance.model";
 
 @Injectable({
   providedIn: 'root',
@@ -16,16 +16,16 @@ export class FinanceService {
               private messageService: MessageService) {
   }
 
-  getAll(ativo: string, limit: number = 30): Observable<Variance[]> {
+  getAll(ativo: string, limit: number = 30): Observable<IVariance[]> {
     return this.http
-      .get<Finance>(`${this.financeUrl}/chart/${ativo}`)
+      .get<IFinance>(`${this.financeUrl}/chart/${ativo}`)
       .pipe(
-        map((finance: Finance) => this.formattedResult(finance, limit)),
+        map((finance: IFinance) => this.formattedResult(finance, limit)),
         tap((items) => this.log(`Consultou o ativo: ${ativo}`))
       );
   }
 
-  private formattedResult(finance: Finance, limit: number): Variance[] {
+  private formattedResult(finance: IFinance, limit: number): IVariance[] {
     try {
       const result = finance.chart.result[0];
       const timestamps = result.timestamp.slice(limit * -1);
@@ -47,7 +47,7 @@ export class FinanceService {
           price: price || 0,
           variationDMinusOne,
           firstDateVariation,
-        } as Variance
+        } as IVariance
       });
 
       return variances;

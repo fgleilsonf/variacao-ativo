@@ -27,7 +27,7 @@ export class DashboardComponent implements OnInit {
     this.getVariances();
   }
 
-  onChange = (event: any) => {
+  onChange = () => {
     if (!this.updateAutomatically) {
       this.updateSubscription.unsubscribe();
     } else {

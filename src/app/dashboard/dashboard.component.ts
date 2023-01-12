@@ -12,8 +12,6 @@ export class DashboardComponent implements OnInit {
   ativo: string = 'PETR4.SA';
   LIMIT_TO_SHOW = 30;
 
-  displayedColumns: string[] = ['day', 'date', 'price', 'variationDMinusOne', 'firstDateVariation'];
-
   constructor(private financeService: FinanceService) {
   }
 

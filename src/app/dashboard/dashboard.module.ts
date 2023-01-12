@@ -5,9 +5,10 @@ import { MaterialModule } from '../material/material.module';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { LineChartComponent } from './components/line-chart/line-chart.component';
+import { TableVarianceComponent } from './components/table-variance/table-variance.component';
 
 @NgModule({
-  declarations: [DashboardComponent, LineChartComponent],
+  declarations: [DashboardComponent, LineChartComponent, TableVarianceComponent],
   imports: [
     CommonModule,
     DashboardRoutingModule,

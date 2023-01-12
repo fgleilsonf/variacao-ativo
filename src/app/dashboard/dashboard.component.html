@@ -23,10 +23,10 @@
       </ng-container>
 
       <!-- D-1 -->
-  <ng-container matColumnDef="variationDMinusOne">
-    <mat-header-cell *matHeaderCellDef> Variação em relaçào a D-1</mat-header-cell>
-    <mat-cell *matCellDef="let row"> {{ row.id == 1 ? '-' : row.variationDMinusOne | percent: '1.2-2' }}</mat-cell>
-  </ng-container>
+      <ng-container matColumnDef="variationDMinusOne">
+        <mat-header-cell *matHeaderCellDef> Variação em relaçào a D-1</mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{ row.id == 1 ? '-' : row.variationDMinusOne | percent: '1.2-2' }}</mat-cell>
+      </ng-container>
 
       <!-- firstDateVariation -->
       <ng-container matColumnDef="firstDateVariation">

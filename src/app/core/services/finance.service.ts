@@ -11,8 +11,10 @@ import { Variance } from "../models/variance.model";
 })
 export class FinanceService {
   private financeUrl = `${environment.baseUrl}/finance`;
+
   constructor(private http: HttpClient,
-              private messageService: MessageService) {}
+              private messageService: MessageService) {
+  }
 
   getAll(ativo: string, limit: number = 30): Observable<Variance[]> {
     return this.http

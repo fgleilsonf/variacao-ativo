@@ -15,4 +15,5 @@ import { LineChartComponent } from './components/line-chart/line-chart.component
     MaterialModule,
   ],
 })
-export class DashboardModule {}
+export class DashboardModule {
+}

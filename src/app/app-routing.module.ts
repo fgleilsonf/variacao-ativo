@@ -10,6 +10,11 @@ const routes: Routes = [
       import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
   },
   {
+    path: 'logger',
+    loadChildren: () =>
+      import('./logger/logger.module').then((m) => m.LoggerModule),
+  },
+  {
     path: '**',
     component: PageNotFoundComponent,
   },

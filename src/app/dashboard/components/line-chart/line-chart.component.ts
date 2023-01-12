@@ -12,7 +12,8 @@ export class LineChartComponent implements AfterViewInit {
   @ViewChild('lineCanvas') lineCanvas: ElementRef | undefined;
   lineChart: any;
 
-  constructor() {}
+  constructor() {
+  }
 
   ngAfterViewInit(): void {
     this.lineChartMethod();
@@ -25,11 +26,11 @@ export class LineChartComponent implements AfterViewInit {
   }
 
   updateChart() {
-    const labels: number[] = this.data.map((item)=> {
+    const labels: number[] = this.data.map((item) => {
       return item.day + 1;
     });
 
-    const data = this.data.map((item)=> {
+    const data = this.data.map((item) => {
       return item.price;
     });
 

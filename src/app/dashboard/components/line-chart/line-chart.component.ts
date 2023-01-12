@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, Input, SimpleChanges, ViewChild } from '@angular/core';
 import Chart from 'chart.js/auto';
-import { Variance } from '../../../core/models/variance.model';
+import { IVariance } from '../../../core/models/variance.model';
 
 @Component({
   selector: 'app-line-chart',
@@ -8,7 +8,7 @@ import { Variance } from '../../../core/models/variance.model';
   styleUrls: ['./line-chart.component.css'],
 })
 export class LineChartComponent implements AfterViewInit {
-  @Input() data: Variance[] = [];
+  @Input() data: IVariance[] = [];
   @ViewChild('lineCanvas') lineCanvas: ElementRef | undefined;
   lineChart: any;
 

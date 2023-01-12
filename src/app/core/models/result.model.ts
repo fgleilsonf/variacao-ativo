@@ -1,7 +1,7 @@
-import { Indicator } from "./indicator.model";
+import { IIndicator } from "./indicator.model";
 
-export interface Result {
+export interface IResult {
   meta: object;
   timestamp: number[];
-  indicators: Indicator
+  indicators: IIndicator
 }

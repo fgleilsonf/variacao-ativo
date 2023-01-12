@@ -1,4 +1,4 @@
-export interface Variance {
+export interface IVariance {
   price: number;
   day: number;
   date: number;

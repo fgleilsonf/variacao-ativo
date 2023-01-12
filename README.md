@@ -32,6 +32,12 @@ $ ng serve or yarn start
 
 Navigate to http://localhost:4200/
 
+#### Run tests
+
+```bash
+$ yarn test or ng test
+```
+
 #### Deploy automatic
 
 Deployment is done automatically when merging into the main branch.

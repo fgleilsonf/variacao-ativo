@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
-import { MenuItem } from '../../models/menu-item.model';
+import { IMenuItem } from '../../models/menu-item.model';
 
 @Component({
   selector: 'app-toolbar',
   templateUrl: './toolbar.component.html',
 })
 export class ToolbarComponent {
-  @Input() menuItems: MenuItem[] = [];
+  @Input() menuItems: IMenuItem[] = [];
   @Input() title = '';
 }

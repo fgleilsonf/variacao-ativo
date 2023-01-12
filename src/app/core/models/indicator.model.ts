@@ -1,5 +1,5 @@
-import { Quote } from './quote.model';
+import { IQuote } from './quote.model';
 
-export interface Indicator {
-  quote: Quote[]
+export interface IIndicator {
+  quote: IQuote[]
 }

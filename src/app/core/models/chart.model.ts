@@ -1,5 +1,5 @@
-import { Result } from './result.model';
+import { IResult } from './result.model';
 
-export interface Chart {
-  result: Result[]
+export interface IChart {
+  result: IResult[]
 }

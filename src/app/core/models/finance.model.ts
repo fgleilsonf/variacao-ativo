@@ -1,5 +1,5 @@
-import { Chart } from './chart.model';
+import { IChart } from './chart.model';
 
-export interface Finance {
-  chart: Chart
+export interface IFinance {
+  chart: IChart
 }

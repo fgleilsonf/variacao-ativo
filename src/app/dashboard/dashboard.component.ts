@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FinanceService } from "../core/services/finance.service";
-import { Variance } from "../core/models/variance.model";
+import { IVariance } from "../core/models/variance.model";
 import { interval, Subscription } from 'rxjs';
 
 @Component({
@@ -10,7 +10,7 @@ import { interval, Subscription } from 'rxjs';
 })
 export class DashboardComponent implements OnInit {
   TIMER: number = 30 * 1000;
-  variances: Variance[] = [];
+  variances: IVariance[] = [];
   ativo: string = 'PETR4.SA';
   LIMIT_TO_SHOW = 30;
   updateAutomatically: boolean = true;

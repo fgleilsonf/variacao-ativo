@@ -10,7 +10,7 @@ import { IVariance } from "../models/variance.model";
   providedIn: 'root',
 })
 export class FinanceService {
-  private financeUrl = `${environment.baseUrl}/finance`;
+  private financeUrl = environment.baseUrl;
 
   constructor(private http: HttpClient,
               private messageService: MessageService) {
@@ -18,7 +18,7 @@ export class FinanceService {
 
   getAll(ativo: string, limit: number = 30): Observable<IVariance[]> {
     return this.http
-      .get<IFinance>(`${this.financeUrl}/chart/${ativo}`)
+      .get<IFinance>(`${this.financeUrl}/${ativo}`)
       .pipe(
         map((finance: IFinance) => this.formattedResult(finance, limit)),
         tap((items) => this.log(`Consultou o ativo: ${ativo}`))
